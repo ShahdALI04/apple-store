@@ -1,0 +1,128 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    background: black;
+    min-height:100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+header{
+  display: flex;
+  justify-content: space-between;  
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  padding: 20px 0px;
+}
+.logo{
+    width: 40px;
+}
+ul li{
+    /* inline-block --> remove the black dot in list*/
+    display: inline-block;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+.content .text{
+    width: 40%;
+    color: white;
+}
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.content .text p{
+    font-size: 18px;
+    margin-inline-start: 20px 0;
+    padding: 15px;
+}
+.content .text a{
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 8px 15px;
+    border-radius:20px ;
+}
+.content .text .image{
+    width: 30%;
+}
+.content .text .image{
+    width: 180px;
+}
+.icons{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icons img{
+    width: 40px;
+    transition:0.5s ;
+    cursor: pointer;
+}
+.icons img:hover{
+    transform: scale(1.2);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+     ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content .text, .content .image {
+        width: 100%;
+    }
+
+    .content .text h2 {
+        font-size: 30px;
+    }
+
+    .content .text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content .text h2 {
+        font-size: 24px;
+    }
+    
+    .content .text p {
+        font-size: 14px;
+    }
+    
+    .content .text a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .icons img {
+        width: 30px;
+    }
+}
